@@ -660,24 +660,12 @@ footer{background:#130f0a;padding:20px 72px;display:flex;justify-content:space-b
     </div>
 
     <div class="video-box reveal" id="videoBox">
-      <div class="vb-empty" id="vbEmpty">
-        <div class="vb-hint">
-          产品演示视频
-          <span>Paste a link or upload to show your demo</span>
-        </div>
-        <div class="vb-url-row">
-          <div class="vb-input-wrap">
-            <input id="vid-url-input" type="text" placeholder="Paste video URL · 粘贴视频链接" onkeydown="if(event.key==='Enter')submitUrl()">
-            <button onclick="submitUrl()">Go →</button>
-          </div>
-          <div class="vb-or">支持 YouTube · Bilibili · 直链</div>
-          <button class="vb-upload clickable" onclick="document.getElementById('vid-file').click()">
-            <svg viewBox="0 0 14 14" fill="none" style="width:12px;height:12px;"><path d="M7 1v8M4 4l3-3 3 3M2 11h10" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            Upload Local File
-          </button>
-          <input type="file" id="vid-file" accept="video/*" onchange="loadVideo(this)" style="display:none">
-        </div>
-      </div>
+      <iframe
+        src="https://player.bilibili.com/player.html?bvid=BV18SoxBPEvH&autoplay=0&high_quality=1&danmaku=0"
+        style="width:100%;height:100%;border:none;"
+        allowfullscreen
+        allow="autoplay"
+      ></iframe>
     </div>
   </div>
 </section>
